@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Demo.PL
-build_property.ProjectDir = D:\my-app\projects\DesignPattern\Demo.PL\
+build_property.ProjectDir = D:\my-app\projects\Three_Tier_Architecture_Project\DesignPattern\Demo.PL\

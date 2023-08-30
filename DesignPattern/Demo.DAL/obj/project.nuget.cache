@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u1yIy8cwRqhdVcGS35OSO//XlZXyNCmbyF0V4us2waW73ZNolm1+2MmIGa2nDvAHJtVmYASpvx9MN3xKte7YaQ==",
+  "dgSpecHash": "EM58McWq0pCP85tGxgnS4aGfrGeoBC6jXXO7gf5FgeKihePsgMZ8k4L2vJFyt/DMLuFBC8C23Vz7ZlvQaFs/aA==",
   "success": true,
-  "projectFilePath": "D:\\my-app\\projects\\DesignPattern\\Demo.DAL\\Demo.DAL.csproj",
+  "projectFilePath": "D:\\my-app\\projects\\Three_Tier_Architecture_Project\\DesignPattern\\Demo.DAL\\Demo.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
