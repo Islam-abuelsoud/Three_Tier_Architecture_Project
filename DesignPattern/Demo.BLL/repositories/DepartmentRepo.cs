@@ -1,4 +1,5 @@
 ﻿using Demo.BLL.Interfaces;
+using Demo.DAL.Contexts;
 using Demo.DAL.Entites;
 using System;
 using System.Collections.Generic;
@@ -8,31 +9,41 @@ using System.Threading.Tasks;
 
 namespace Demo.BLL.repositories
 {
-    internal class DepartmentRepo : IDepartmentRepo
+    public class DepartmentRepo : IDepartmentRepo
     {
+        private readonly DesignPatternAppContext context;
+
+        public DepartmentRepo(DesignPatternAppContext context)
+        {
+            this.context = context;
+        }
         public int Add(Department department)
         {
-            throw new NotImplementedException();
+
+            context.Departments.Add(department);
+            return context.SaveChanges();
         }
 
         public int Delete(Department department)
         {
-            throw new NotImplementedException();
+            context.Remove(department);
+            return context.SaveChanges();
         }
 
         public Department get(int? id)
         {
-            throw new NotImplementedException();
+            return context.Departments.FirstOrDefault(d => d.Id == id);
         }
 
         public IEnumerable<Department> GetAll()
         {
-            throw new NotImplementedException();
+            return context.Departments.ToList();
         }
 
         public int Update(Department department)
         {
-            throw new NotImplementedException();
+            context.Departments.Update(department);
+            return context.SaveChanges();
         }
     }
 }

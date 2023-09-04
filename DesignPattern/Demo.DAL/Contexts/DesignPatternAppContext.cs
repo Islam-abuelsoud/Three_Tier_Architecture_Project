@@ -9,10 +9,14 @@ using System.Threading.Tasks;
 
 namespace Demo.DAL.Contexts
 {
-    internal class DesignPatternAppContext : DbContext
+    public class DesignPatternAppContext : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-       => optionsBuilder.UseSqlServer("Server=.; Database=DesignPatternApp; Trusted_Connection=true; multipleactiveresultsets=true; ");
-        DbSet<Department> Departments { get; set; }
+        public DesignPatternAppContext(DbContextOptions<DesignPatternAppContext> options):base(options)
+        {
+            
+        }
+       // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+       //=> optionsBuilder.UseSqlServer("Server=.; Database=DesignPatternApp; Trusted_Connection=true; multipleactiveresultsets=true; ");
+         public DbSet<Department> Departments { get; set; }
     }
 }

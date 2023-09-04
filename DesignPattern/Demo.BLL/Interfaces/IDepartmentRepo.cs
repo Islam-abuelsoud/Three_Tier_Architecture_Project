@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Demo.BLL.Interfaces
 {
-    internal interface IDepartmentRepo
+    public interface IDepartmentRepo
     {
         Department get(int? id);
         IEnumerable<Department> GetAll();

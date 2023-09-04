@@ -1,6 +1,10 @@
+using Demo.BLL.Interfaces;
+using Demo.BLL.repositories;
+using Demo.DAL.Contexts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,7 +28,11 @@ namespace Demo.PL
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-
+            services.AddDbContext<DesignPatternAppContext>(o =>
+            {
+                o.UseSqlServer(Configuration.GetConnectionString("DefultConnection"));
+            });
+            services.AddScoped<IDepartmentRepo, DepartmentRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
