@@ -15,5 +15,9 @@ namespace Demo.PL.Controllers
         {
             return View(departmentRepo.GetAll());
         }
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
