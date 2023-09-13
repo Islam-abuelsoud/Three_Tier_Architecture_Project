@@ -1,4 +1,5 @@
 ﻿using Demo.BLL.Interfaces;
+using Demo.DAL.Entites;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Demo.PL.Controllers
@@ -18,6 +19,19 @@ namespace Demo.PL.Controllers
         public IActionResult Create()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult Create(Department department)
+        {
+            if (ModelState.IsValid)
+            {
+                departmentRepo.Add(department);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(department);
+            }
         }
     }
 }

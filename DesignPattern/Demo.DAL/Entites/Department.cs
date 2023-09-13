@@ -11,9 +11,9 @@ namespace Demo.DAL.Entites
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "This Feaild Is required")]
+        [StringLength (100 ,MinimumLength =5 ,ErrorMessage ="invalid char lenght")]
         public string Name { get; set; }
         [Required (ErrorMessage = "This Feaild Is required")]
-        [StringLength (100 ,MinimumLength =5 ,ErrorMessage ="invalid char lenght")]
         public string Code { get; set; }
         public DateTime DateOfCreation { get; set; }
     }
