@@ -21,6 +21,7 @@ namespace Demo.PL.Controllers
             return View();
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(Department department)
         {
             if (ModelState.IsValid)
@@ -33,5 +34,48 @@ namespace Demo.PL.Controllers
                 return View(department);
             }
         }
+        public IActionResult Details(int? id, string ViewName = "Details")
+        {
+            if (id == null)
+                return NotFound();
+            var dep = departmentRepo.get(id);
+            if (dep == null)
+                return NotFound();
+            return View(ViewName, dep);
+        }
+        public IActionResult Edit(int? Id)
+        {
+            return Details(Id, "Edit");
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit([FromRoute]int Id, Department department)
+        {
+            if (Id != department.Id)
+                return BadRequest();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    departmentRepo.Update(department);
+                    return RedirectToAction("Index");
+                }
+                catch
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+        public IActionResult Delete(int ? Id)
+        {
+            return Details(Id, "Delete");
+        }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public IActionResult Delete()
+        //{
+
+        //}
     }
 }

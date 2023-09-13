@@ -434,3 +434,5 @@ D:\Three_Tier_Architecture_Project\DesignPattern\Demo.PL\obj\Debug\net5.0\Demo.P
 D:\Three_Tier_Architecture_Project\DesignPattern\Demo.PL\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
 D:\Three_Tier_Architecture_Project\DesignPattern\Demo.PL\obj\Debug\net5.0\Razor\Views\Department\Index.cshtml.g.cs
 D:\Three_Tier_Architecture_Project\DesignPattern\Demo.PL\obj\Debug\net5.0\Razor\Views\Department\Create.cshtml.g.cs
+D:\Three_Tier_Architecture_Project\DesignPattern\Demo.PL\obj\Debug\net5.0\Razor\Views\Department\Details.cshtml.g.cs
+D:\Three_Tier_Architecture_Project\DesignPattern\Demo.PL\obj\Debug\net5.0\Razor\Views\Department\Edit.cshtml.g.cs
