@@ -49,7 +49,7 @@ namespace Demo.PL.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit([FromRoute]int Id, Department department)
+        public IActionResult Edit([FromRoute] int Id, Department department)
         {
             if (Id != department.Id)
                 return BadRequest();
@@ -67,15 +67,29 @@ namespace Demo.PL.Controllers
             }
             return BadRequest();
         }
-        public IActionResult Delete(int ? Id)
+        public IActionResult Delete(int? Id)
         {
             return Details(Id, "Delete");
         }
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult Delete()
-        //{
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete([FromRoute]int? Id, Department department)
+        {
+            if(Id != department.Id)
+            {
+                return NotFound();
+            }
+            try
+            {
+                departmentRepo.Delete(department);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (System.Exception)
+            {
 
-        //}
+                return BadRequest();
+            }
+
+        }
     }
 }
