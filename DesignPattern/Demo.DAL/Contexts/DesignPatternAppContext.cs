@@ -18,5 +18,6 @@ namespace Demo.DAL.Contexts
        // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
        //=> optionsBuilder.UseSqlServer("Server=.; Database=DesignPatternApp; Trusted_Connection=true; multipleactiveresultsets=true; ");
          public DbSet<Department> Departments { get; set; }
+         public DbSet<Employee> Employees { get; set; }
     }
 }
