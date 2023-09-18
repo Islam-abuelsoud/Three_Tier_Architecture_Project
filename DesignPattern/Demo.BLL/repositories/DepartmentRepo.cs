@@ -9,41 +9,12 @@ using System.Threading.Tasks;
 
 namespace Demo.BLL.repositories
 {
-    public class DepartmentRepo : IDepartmentRepo
+    public class DepartmentRepo : GenericRepo<Department>,IDepartmentRepo
     {
-        private readonly DesignPatternAppContext context;
-
-        public DepartmentRepo(DesignPatternAppContext context)
-        {
-            this.context = context;
-        }
-        public int Add(Department department)
+        public DepartmentRepo(DesignPatternAppContext context):base(context)
         {
 
-            context.Departments.Add(department);
-            return context.SaveChanges();
         }
 
-        public int Delete(Department department)
-        {
-            context.Remove(department);
-            return context.SaveChanges();
-        }
-
-        public Department get(int? id)
-        {
-            return context.Departments.FirstOrDefault(d => d.Id == id);
-        }
-
-        public IEnumerable<Department> GetAll()
-        {
-            return context.Departments.ToList();
-        }
-
-        public int Update(Department department)
-        {
-            context.Departments.Update(department);
-            return context.SaveChanges();
-        }
     }
 }
