@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Demo.BLL.repositories
 {
-    internal class EmployeeRepo : GenericRepo<Employee> ,IEmployeeRepo
+    public class EmployeeRepo : GenericRepo<Employee> ,IEmployeeRepo
     {
         public EmployeeRepo(DesignPatternAppContext context):base(context)
         {

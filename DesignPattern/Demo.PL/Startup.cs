@@ -33,6 +33,7 @@ namespace Demo.PL
                 o.UseSqlServer(Configuration.GetConnectionString("DefultConnection"));
             });
             services.AddScoped<IDepartmentRepo, DepartmentRepo>();
+            services.AddScoped<IEmployeeRepo, EmployeeRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
