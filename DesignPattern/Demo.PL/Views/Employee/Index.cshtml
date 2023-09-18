@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Employee>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Employees</h1>
+<br />
+<a asp-action="Create" asp-controller="Employee" class="btn btn-primary">Create New Employee</a>
+@if (Model.Count() > 0)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(d=>d.Name) </th>
+                <th>@Html.DisplayNameFor(d=>d.Address) </th>
+                <th>@Html.DisplayNameFor(d=>d.Age) </th>
+                <th>@Html.DisplayNameFor(d=>d.Salary) </th>
+                <th>@Html.DisplayNameFor(d=>d.Email) </th>
+                <th>@Html.DisplayNameFor(d=>d.PhoneNumber) </th>
+                <th>@Html.DisplayNameFor(d=>d.IsActive) </th>
+                <th>@Html.DisplayNameFor(d=>d.HaireDate) </th>
+                <th>Details</th>
+                <th>UpDate</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Employee in Model)
+            {
+                <tr>
+                    <td>@Employee.Name</td>
+                    <td>@Employee.Address</td>
+                    <td>@Employee.Age</td>
+                    <td>@Employee.Salary</td>
+                    <td>@Employee.Email</td>
+                    <td>@Employee.PhoneNumber</td>
+                    <td>@Employee.IsActive</td>
+                    <td>@Employee.HaireDate</td>
+                    <td>
+                        <a asp-action="Details" asp-controller="Employee" asp-route-id="@Employee.Id" class="btn btn-success ">Details</a>
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-controller="Employee" asp-route-id="@Employee.Id" class="btn btn-Warning ">Update</a>
+                    </td>
+                    <td>
+                        <a asp-action="Delete" asp-controller="Employee" asp-route-id="@Employee.Id" class="btn btn-danger ">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="my-3 alert alert-warning">
+        <p>There no Employees here!!</p>
+    </div>
+}
+
+
+
