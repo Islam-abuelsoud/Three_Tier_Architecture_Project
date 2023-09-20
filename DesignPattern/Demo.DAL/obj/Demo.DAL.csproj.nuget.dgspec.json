@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\my-app\\projects\\Three_Tier_Architecture_Project\\DesignPattern\\Demo.DAL\\Demo.DAL.csproj": {}
+    "D:\\Three_Tier_Architecture_Project\\DesignPattern\\Demo.DAL\\Demo.DAL.csproj": {}
   },
   "projects": {
-    "D:\\my-app\\projects\\Three_Tier_Architecture_Project\\DesignPattern\\Demo.DAL\\Demo.DAL.csproj": {
+    "D:\\Three_Tier_Architecture_Project\\DesignPattern\\Demo.DAL\\Demo.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\my-app\\projects\\Three_Tier_Architecture_Project\\DesignPattern\\Demo.DAL\\Demo.DAL.csproj",
+        "projectUniqueName": "D:\\Three_Tier_Architecture_Project\\DesignPattern\\Demo.DAL\\Demo.DAL.csproj",
         "projectName": "Demo.DAL",
-        "projectPath": "D:\\my-app\\projects\\Three_Tier_Architecture_Project\\DesignPattern\\Demo.DAL\\Demo.DAL.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\my-app\\projects\\Three_Tier_Architecture_Project\\DesignPattern\\Demo.DAL\\obj\\",
+        "projectPath": "D:\\Three_Tier_Architecture_Project\\DesignPattern\\Demo.DAL\\Demo.DAL.csproj",
+        "packagesPath": "C:\\Users\\Mahmoud Refaat\\.nuget\\packages\\",
+        "outputPath": "D:\\Three_Tier_Architecture_Project\\DesignPattern\\Demo.DAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mahmoud Refaat\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -51,8 +54,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -61,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
