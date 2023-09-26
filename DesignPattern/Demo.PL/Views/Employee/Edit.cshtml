@@ -1,11 +1,12 @@
 ﻿@model Employee
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
 }
 
-<h1>Create New Employee</h1>
+<h1>Edit Employee</h1>
 <br />
-<form asp-action="Create">
+<form asp-action="Edit">
+    <input hidden asp-for="Id" />
 
     <div class="form-group">
         <label class="" asp-for="Name"></label>
@@ -47,7 +48,7 @@
         <input class="form-control" asp-for="HaireDate" />
         <span asp-validation-for="HaireDate" class="text-danger"></span>
     </div>
-    <input class="btn btn-primary" type="Submit" valeu="Submit" /> |
+    <input class="btn btn-primary" type="Submit" valeu="Save" /> |
     <a asp-action="Index" asp-controller="Employee" class="btn btn-light">Back To List</a>
 </form>
 @section validation{

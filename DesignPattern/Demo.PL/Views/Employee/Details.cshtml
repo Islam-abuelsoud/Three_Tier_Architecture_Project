@@ -1,0 +1,46 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details Employee</h1>
+<br />
+<div asp-action="Details">
+
+    <div class="form-group">
+        <label class="" asp-for="Name"></label>
+        <input class="form-control" asp-for="Name" readonly />
+    </div>
+    <div class="form-group">
+        <label class="" asp-for="Address"></label>
+        <input class="form-control" asp-for="Address" readonly />
+    </div>
+    <div class="form-group">
+        <label class="" asp-for="Age"></label>
+        <input class="form-control" asp-for="Age" readonly />
+    </div>
+    <div class="form-group">
+        <label class="" asp-for="Salary"></label>
+        <input class="form-control" asp-for="Salary" readonly />
+    </div>
+    <div class="form-group">
+        <label class="" asp-for="Email"></label>
+        <input class="form-control" asp-for="Email" readonly />
+    </div>
+    <div class="form-group">
+        <label class="" asp-for="PhoneNumber"></label>
+        <input class="form-control" asp-for="PhoneNumber" readonly />
+    </div>
+    <div class="form-group">
+        <label class="" asp-for="IsActive"></label>
+        <input class="form-control" asp-for="IsActive" readonly  disabled/>
+    </div>
+    <div class="form-group">
+        <label class="" asp-for="HaireDate"></label>
+        <input class="form-control" asp-for="HaireDate" readonly />
+    </div>
+    <a class="btn btn-primary"asp-action="Edit">Edit</a> |
+    <a asp-action="Index" asp-controller="Employee" class="btn btn-light">Back To List</a>
+</div>
+
+

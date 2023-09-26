@@ -31,10 +31,10 @@
                     <td>@Employee.Name</td>
                     <td>@Employee.Address</td>
                     <td>@Employee.Age</td>
-                    <td>@Employee.Salary</td>
-                    <td>@Employee.Email</td>
+                    <td>@Html.DisplayFor(m=>Employee.Salary)</td>
+                    <td>@Html.DisplayFor(m=>Employee.Email)</td>
                     <td>@Employee.PhoneNumber</td>
-                    <td>@Employee.IsActive</td>
+                    <td>@Html.DisplayFor(m=>Employee.IsActive)</td>
                     <td>@Employee.HaireDate</td>
                     <td>
                         <a asp-action="Details" asp-controller="Employee" asp-route-id="@Employee.Id" class="btn btn-success ">Details</a>

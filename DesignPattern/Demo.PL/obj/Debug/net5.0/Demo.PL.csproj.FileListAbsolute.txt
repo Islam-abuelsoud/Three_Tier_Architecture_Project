@@ -883,3 +883,5 @@ D:\my-app\projects\Three_Tier_Architecture_Project\DesignPattern\Demo.PL\obj\Deb
 D:\my-app\projects\Three_Tier_Architecture_Project\DesignPattern\Demo.PL\obj\Debug\net5.0\ref\Demo.PL.dll
 D:\my-app\projects\Three_Tier_Architecture_Project\DesignPattern\Demo.PL\obj\Debug\net5.0\Razor\Views\Employee\Index.cshtml.g.cs
 D:\my-app\projects\Three_Tier_Architecture_Project\DesignPattern\Demo.PL\obj\Debug\net5.0\Razor\Views\Employee\Create.cshtml.g.cs
+D:\my-app\projects\Three_Tier_Architecture_Project\DesignPattern\Demo.PL\obj\Debug\net5.0\Razor\Views\Employee\Details.cshtml.g.cs
+D:\my-app\projects\Three_Tier_Architecture_Project\DesignPattern\Demo.PL\obj\Debug\net5.0\Razor\Views\Employee\Edit.cshtml.g.cs
